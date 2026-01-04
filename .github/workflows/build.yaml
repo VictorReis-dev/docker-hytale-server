@@ -19,7 +19,9 @@ jobs:
               uses: docker/metadata-action@v5
               with:
                   images: ${{ secrets.DOCKER_USERNAME }}/hytale-server
-                  tags: type=pep440,pattern={{version}}
+                  tags: |
+                    type=pep440,pattern={{version}}
+                    type=raw,value=latest,enable={{is_default_branch}}
 
             - name: Log in to Docker Hub
               uses: docker/login-action@v3
