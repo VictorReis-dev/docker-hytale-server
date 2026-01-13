@@ -30,4 +30,4 @@ LABEL org.opencontainers.image.title="Hytale Server Image" \
       org.opencontainers.image.source="https://github.com/voidcubedotgg/hytale-server-docker" \
       org.opencontainers.image.licenses="MIT"
 
-EXPOSE 5520
+EXPOSE 5520/udp
